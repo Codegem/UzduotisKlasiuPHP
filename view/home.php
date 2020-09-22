@@ -7,8 +7,13 @@ $masina = new Masina("Masina", "Yra", "Yra", "Yra", "Yra"),
 $dviratis = new Masina("Dviratis", "Yra", "Yra", "Nera", "Yra"),
 $motociklas = new Masina("Motociklas", "Yra", "Yra", "Yra", "Yra")
 ];
-
+ 
+    $car = new Masina();
+    $car->setModelis("Golfas");
+    $Modelis = $car->getModelis();
+    echo $Modelis;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,3 +43,4 @@ $motociklas = new Masina("Motociklas", "Yra", "Yra", "Yra", "Yra")
 
 </body>
 </html>
+
