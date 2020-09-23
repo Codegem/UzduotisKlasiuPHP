@@ -1,76 +1,40 @@
-<?php 
+<?php
+
 namespace MasinosApp;
 
-    class Masina{
-        private $Modelis, 
-                $Marke, 
-                $Kaina, 
-                $Svoris, 
-                $Variklis, 
-                $Maxspeed;
-        public $Tpriemone;
-        public $Ratai;
-        public $Sedynes;
-        public $Lempos;
-        public $Padangos;
+class Masina{
+    public $Langai;
+    public $Radija;
+    public $Atlosai;
 
-// metodas kuris privalomai kvieciamas kuriant objekta
-    public function __construct($Tpriemone, $Ratai, $Sedynes, $Lempos, $Padangos)
+    public function __construct($Langai, $Radija, $Atlosai)
     {
-        $this->Tpriemone = $Tpriemone;
-        $this->Ratai = $Ratai;
-        $this->Sedynes = $Sedynes;
-        $this->Lempos = $Lempos;
-        $this->Padangos = $Padangos;
+        $this->Langai = $Langai;
+        $this->Radija = $Radija;
+        $this->Atlosai = $Atlosai;
     }
+
+
+    public function setLangai($Langai){
+        $this->Langai = $Langai;
+    }
+    public function getLangai(){
+        return $this->Langai;
+    }
+
+    public function setRadija($Radija){
+        $this->Radija = $Radija;
+    }
+    public function getRadija(){
+        return $this->Radija;
+    }
+
+    public function setAtlosai($Atlosai){
+        $this->Atlosai = $Atlosai;
+    }
+    public function getAtlosai(){
+        return $this->Atlosai;
+    }
+
     
-
-    public function showProfile(){
-    $data[] = $this->Tpriemone;
-    $data[] = $this->Ratai;
-    $data[] = $this->Sedynes;
-    $data[] = $this->Lempos;
-    $data[] = $this->Padangos;
-
-    return $data;
-    }
-
-    public function setModelis($Modelis){
-        $this->Modelis = $Modelis;
-    }
-    public function getModelis(){
-        return $this->Modelis;
-    }
-    public function setMarke($Marke){
-        $this->Marke = $Marke;
-    }
-    public function getMarke(){
-        return $this->Marke;
-    }
-    public function setKaina($Kaina){
-        $this->Kaina = $Kaina;
-    }
-    public function getKaina(){
-        return $this->Kaina;
-    }
-    public function setSvoris($Svoris){
-        $this->Svoris = $Svoris;
-    }
-    public function getSvoris(){
-        return $this->Svoris;
-    }
-    public function setVariklis($Variklis){
-        $this->Variklis = $Variklis;
-    }
-    public function getVariklis(){
-        return $this->Variklis;
-    }
-    public function setMaxspeed($Maxspeed){
-        $this->Maxspeed = $Maxspeed;
-    }
-    public function getMaxspeed(){
-        return $this->Maxspeed;
-    }
-
-
 }
