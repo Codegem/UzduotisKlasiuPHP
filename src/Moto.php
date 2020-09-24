@@ -2,16 +2,26 @@
 
 namespace MasinosApp;
 
-class Moto{
+class Moto extends Transportas{
     public $SankabosRankena;
     public $GrandinesZvaigzde;
     public $BegiuPedalas;
 
-    public function __construct($SankabosRankena, $GrandinesZvaigzde, $BegiuPedalas)
+    public function __construct($Ratai, $Sedynes, $Lempos, $Modelis, 
+    $Marke, $Kaina, $Svoris, $Variklis, $Maxspeed, $SankabosRankena, $GrandinesZvaigzde, $BegiuPedalas)
     {
+        parent:: __construct($Ratai, $Sedynes, $Lempos, $Modelis, 
+            $Marke, $Kaina, $Svoris, $Variklis, $Maxspeed);
         $this->SankabosRankena = $SankabosRankena;
         $this->GrandinesZvaigzde = $GrandinesZvaigzde;
         $this->BegiuPedalas = $BegiuPedalas;
+    }
+
+    public function masinaCollect(){
+        $ArrMoto [] = $this ->SankabosRankena;
+        $ArrMoto [] = $this ->GrandinesZvaigzde;
+        $ArrMoto [] = $this ->BegiuPedalas;
+        return $ArrMoto;
     }
 
     public function setSankabosRankena($SankabosRankena){
@@ -34,6 +44,5 @@ class Moto{
     public function getBegiuPedalas(){
         return $this->BegiuPedalas;
     }
-
 
 }

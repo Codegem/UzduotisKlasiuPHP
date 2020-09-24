@@ -2,16 +2,26 @@
 
 namespace MasinosApp;
 
-class Masina{
+class Masina extends Transportas{
     public $Langai;
     public $Radija;
     public $Atlosai;
 
-    public function __construct($Langai, $Radija, $Atlosai)
+    public function __construct($Ratai, $Sedynes, $Lempos, $Modelis, 
+    $Marke, $Kaina, $Svoris, $Variklis, $Maxspeed, $Langai, $Radija, $Atlosai)
     {
+        parent:: __construct($Ratai, $Sedynes, $Lempos, $Modelis, 
+        $Marke, $Kaina, $Svoris, $Variklis, $Maxspeed); 
         $this->Langai = $Langai;
         $this->Radija = $Radija;
         $this->Atlosai = $Atlosai;
+    }
+
+    public function masinaCollect(){
+        $ArrMas [] = $this ->Langai;
+        $ArrMas [] = $this ->Radija;
+        $ArrMas [] = $this ->Atlosai;
+        return $ArrMas;
     }
 
 

@@ -2,15 +2,15 @@
 namespace MasinosApp;
 
     class Transportas{
-        public $Ratai;
-        public $Sedynes;
-        public $Lempos;
-        private $Modelis;
-        private $Marke; 
-        private $Kaina; 
-        private $Svoris;
-        private $Variklis; 
-        private $Maxspeed;
+        protected $Ratai;
+        protected $Sedynes;
+        protected $Lempos;
+        protected $Modelis;
+        protected $Marke; 
+        protected $Kaina; 
+        protected $Svoris;
+        protected $Variklis; 
+        protected $Maxspeed;
 
     
 
@@ -41,7 +41,6 @@ namespace MasinosApp;
     $data[] = $this->Svoris;
     $data[] = $this->Variklis;
     $data[] = $this->Maxspeed;
-
 
     return $data;
     }
