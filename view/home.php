@@ -10,8 +10,8 @@ use MasinosApp\Show;
 
 $Transportas = new Transportas("Masina", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra");
 $Dviratis = new Dviratis("Dviratis", "aaa", "bbb", "ccc", "ddd", "eee", "sss", "hhh", "eee", "jjj", "pask3", "pask2", "pask1");
-// $Masina = new Masina("Masina", "aaa", "Yra", "bbb", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra", "yra", "bbb", "yra");
-// $Moto = new Moto("Moto", "eee", "Yra", "ddd", "bbb", "ccc", "Yra", "Yra", "Yra", "Yra", "yra", "yra", "yra");
+$Masina = new Masina("Masina", "aaa", "Yra", "bbb", "Yra", "Yra", "Yra", "Yra", "Yra", "Yra", "yra", "bbb", "yra");
+$Moto = new Moto("Moto", "eee", "Yra", "ddd", "bbb", "ccc", "Yra", "Yra", "Yra", "Yra", "yra", "yra", "yra");
 
 
 // $Masina->setVariklis("triperis");
@@ -20,8 +20,8 @@ $Dviratis = new Dviratis("Dviratis", "aaa", "bbb", "ccc", "ddd", "eee", "sss", "
 // foreach($Masina->getModelMarke() as $mod){
 // echo $mod;
 // }
-echo $Dviratis->showProfile();
-
+// echo $Dviratis->showProfile();
+// echo $Dviratis->dviratisCollect();
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +35,20 @@ echo $Dviratis->showProfile();
 <body>
 
 <h1>Dviratis info</h1>
-<?php foreach($Dviratis->showProfile() as $dvirat):?>
-    <p><?=$dvirat?></p>
+<?php foreach($Dviratis->dviratisCollect() as $array):?>
+    <p><?=$array?></p>
 <?php endforeach?>
+
+<h1>Auto info</h1>
+<?php foreach($Masina->masinaCollect() as $array):?>
+    <p><?=$array?></p>
+<?php endforeach?>
+
+<h1>Moto info</h1>
+<?php foreach($Moto->motoCollect() as $array):?>
+    <p><?=$array?></p>
+<?php endforeach?>
+
 </body>
 </html>
 

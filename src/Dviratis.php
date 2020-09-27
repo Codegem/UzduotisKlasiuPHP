@@ -1,6 +1,8 @@
 <?php
 
 namespace MasinosApp;
+use MasinosApp\Transportas;
+
 
 class Dviratis extends Transportas{
     public $Pedalai;
@@ -18,7 +20,7 @@ class Dviratis extends Transportas{
     }
 
     public function dviratisCollect(){
-        
+        foreach($this->showProfile() as $ArrDvir[]);
         $ArrDvir [] = $this ->Pedalai;
         $ArrDvir [] = $this ->Atsvaitai;
         $ArrDvir [] = $this ->Trosai;

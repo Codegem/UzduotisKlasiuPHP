@@ -1,20 +1,9 @@
 html, body{
+    columns: 3;
+    column-gap: 5%;
     height:100%;
     width:100%;
     padding:0;
     margin:0;
-  }
-  table{
-    width: 100%;
-    table-layout:fixed;
-  }
-  th,td {
-    text-align: start;
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    word-wrap: break-word;
-  }
-  table, th, tr,td{
-    border-collapse: collapse;
-    border: 1px solid black;
+    background-color: blueviolet;
   }

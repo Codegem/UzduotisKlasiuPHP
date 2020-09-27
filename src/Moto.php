@@ -1,8 +1,9 @@
 <?php
 
 namespace MasinosApp;
-
+use MasinosApp\Transportas;
 class Moto extends Transportas{
+
     public $SankabosRankena;
     public $GrandinesZvaigzde;
     public $BegiuPedalas;
@@ -17,7 +18,8 @@ class Moto extends Transportas{
         $this->BegiuPedalas = $BegiuPedalas;
     }
 
-    public function masinaCollect(){
+    public function motoCollect(){
+        foreach($this->showProfile() as $ArrMoto[]);
         $ArrMoto [] = $this ->SankabosRankena;
         $ArrMoto [] = $this ->GrandinesZvaigzde;
         $ArrMoto [] = $this ->BegiuPedalas;

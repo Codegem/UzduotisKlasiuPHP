@@ -1,6 +1,8 @@
 <?php
 
 namespace MasinosApp;
+use MasinosApp\Transportas;
+
 
 class Masina extends Transportas{
     public $Langai;
@@ -18,6 +20,7 @@ class Masina extends Transportas{
     }
 
     public function masinaCollect(){
+        foreach($this->showProfile() as $ArrMas[]);
         $ArrMas [] = $this ->Langai;
         $ArrMas [] = $this ->Radija;
         $ArrMas [] = $this ->Atlosai;
